@@ -1,7 +1,11 @@
-import { Container } from "../ui/Container";
 import styled from "styled-components";
 import Menu from "../ui/Menu";
+
 const StyledHeader = styled.header`
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100px;
   display: flex;
@@ -18,17 +22,15 @@ const Logo = styled.div`
 
 function Header() {
   return (
-    <Container>
-      <StyledHeader>
-        <Logo>
-          <img
-            src="/logo-red.png"
-            alt="logo. Andrei Ziuzin - Creative developer"
-          />
-        </Logo>
-        <Menu />
-      </StyledHeader>
-    </Container>
+    <StyledHeader>
+      <Logo>
+        <img
+          src="/logo-red.png"
+          alt="logo. Andrei Ziuzin - Creative developer"
+        />
+      </Logo>
+      <Menu />
+    </StyledHeader>
   );
 }
 
