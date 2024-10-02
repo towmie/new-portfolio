@@ -6,11 +6,11 @@ const StyledHeader = styled.header`
   z-index: 100;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100px;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
 `;
 
 const Logo = styled.div`

@@ -9,7 +9,6 @@ const MenuButton = styled.button`
   position: relative;
   pointer-events: none;
   z-index: 10;
-
   & span {
     cursor: pointer;
     width: 50px;
