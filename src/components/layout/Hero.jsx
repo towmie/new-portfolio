@@ -7,6 +7,7 @@ import { useControls } from "leva";
 import { Suspense, useEffect, useLayoutEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import CreativeText from "../ui/CreativeTExt";
 
 const StyledHero = styled.div`
   position: relative;
@@ -70,7 +71,11 @@ function Hero() {
 
   return (
     <StyledHero>
-      <Canvas camera={{ position: [0, 0, 1], fov: 45 }} color="black">
+      <Canvas
+        // orthographic
+        camera={{ position: [0, 0, 1], fov: 45 }}
+        color="black"
+      >
         <Suspense fallback={null}>
           <OrbitControls />
           <ambientLight intensity={1} />
@@ -84,7 +89,7 @@ function Hero() {
           />
 
           <WavyBackground />
-          <group position={[-2, 0, 0]} ref={textGroupRef}>
+          {/* <group position={[-2, 0, 0]} ref={textGroupRef}>
             {"creative".split("").map((char, index) => (
               <Text
                 key={index}
@@ -96,13 +101,14 @@ function Hero() {
                 {char}
               </Text>
             ))}
-          </group>
+          </group> */}
 
-          <Asterisk
+          {/* <Asterisk
             rotation={[0, 0.4, 0]}
             scale={0.25}
             position={[position.x, position.y, 0]}
-          />
+          /> */}
+          <CreativeText />
         </Suspense>
       </Canvas>
     </StyledHero>
