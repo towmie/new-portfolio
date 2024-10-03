@@ -3,6 +3,7 @@ import fragmentShader from "../../shaders/bg/fragment.glsl";
 import * as THREE from "three";
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
+import { MeshDistortMaterial } from "@react-three/drei";
 
 function WavyBackground() {
   const shaderRef = useRef();
