@@ -33,7 +33,7 @@ function Hero() {
   const textGroupRef = useRef();
   const { position } = useControls("asterisk", {
     position: {
-      value: { x: -0.3, y: 0 },
+      value: { x: -0.45, y: 0.08 },
       step: 0.01,
       joystick: "invertY",
     },
@@ -103,11 +103,11 @@ function Hero() {
             ))}
           </group> */}
 
-          {/* <Asterisk
+          <Asterisk
             rotation={[0, 0.4, 0]}
             scale={0.25}
             position={[position.x, position.y, 0]}
-          /> */}
+          />
           <CreativeText />
         </Suspense>
       </Canvas>
