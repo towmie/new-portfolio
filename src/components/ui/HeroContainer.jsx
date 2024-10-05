@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import styled from "styled-components";
+import { IoIosArrowRoundForward } from "react-icons/io";
 
 const StyledHeroContainer = styled.div`
   position: absolute;
@@ -29,7 +30,7 @@ const HeroTitle = styled.div`
     display: inline-flex;
     margin: 0;
     font-size: 10vw;
-    font-weight: 400;
+    font-weight: 800;
     font-family: "Raleway", sans-serif;
     font-style: italic;
   }
@@ -45,28 +46,56 @@ const SubText = styled.span`
   bottom: -30px;
   right: -35px;
   font-size: 72px;
-  font-weight: 300;
   color: red;
   font-family: "Permanent Marker", cursive;
 `;
 
+const Divider = styled.div`
+  width: 1px;
+  height: 0;
+  background-color: #555555;
+`;
+
 const CVButton = styled.a`
-  margin-top: 4rem;
-  background-color: #000;
-  color: #fff;
+  display: inline-block;
+  margin-top: 2rem;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 6px;
+  border: 1px solid #555555;
+  font-size: 18px;
+  color: #000;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
   text-decoration: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
 `;
 
 function HeroContainer() {
   const lettersRef = useRef();
   const devTextRef = useRef();
+  const arrowRef = useRef();
+  const dividerRef = useRef();
+  const buttonRef = useRef();
+  const tl = gsap.timeline({
+    delay: 1,
+  });
+  const hoverTL = gsap.timeline({ ease: "back.out(1.7)", duration: 0.5 });
+  hoverTL.pause();
 
+  function onMounseIn() {
+    hoverTL.play();
+  }
+
+  function onMouseOut() {
+    hoverTL.reverse();
+  }
   useGSAP(() => {
-    const tl = gsap.timeline({
-      delay: 1,
-    });
+    hoverTL.to(arrowRef.current, { width: "50px" });
+
     tl.fromTo(
       lettersRef.current.children,
       {
@@ -76,14 +105,31 @@ function HeroContainer() {
       {
         opacity: 1,
         y: 0,
-        ease: "back.inOut",
+        ease: "back.inOut(1.7)",
         stagger: 0.06,
       }
-    ).to(devTextRef.current, {
-      opacity: 1,
-      duration: 0.2,
-      ease: "back.inOut",
-    });
+    )
+      .to(
+        devTextRef.current,
+        {
+          opacity: 1,
+          duration: 0.2,
+          ease: "back.inOut",
+        },
+        "-=0.2"
+      )
+      .to(dividerRef.current, {
+        height: "100px",
+        opacity: 1,
+        duration: 0.7,
+        ease: "power2.inOut",
+      })
+      .fromTo(
+        buttonRef.current,
+        { y: -30 },
+        { y: 0, opacity: 1, ease: "back.inOut(2.5)" },
+        "-=0.5"
+      );
   });
 
   return (
@@ -99,7 +145,16 @@ function HeroContainer() {
         </h1>
         <SubText ref={devTextRef}>dev</SubText>
       </HeroTitle>
-      <CVButton>Download CV</CVButton>
+      <Divider ref={dividerRef} />
+      <CVButton
+        ref={buttonRef}
+        onMouseEnter={onMounseIn}
+        onMouseLeave={onMouseOut}
+        href="https://google.com"
+      >
+        Download CV
+        <IoIosArrowRoundForward ref={arrowRef} />
+      </CVButton>
     </StyledHeroContainer>
   );
 }
