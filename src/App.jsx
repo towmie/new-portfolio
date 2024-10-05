@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import About from "./components/layout/About";
 import Footer from "./components/layout/Footer";
-import Header from "./components/layout/Header";
 import Hero from "./components/layout/Hero";
 
 const MainContainer = styled.div`
@@ -13,7 +12,6 @@ const MainContainer = styled.div`
 function App() {
   return (
     <MainContainer>
-      <Header />
       <Hero />
       <About />
       <Footer />
