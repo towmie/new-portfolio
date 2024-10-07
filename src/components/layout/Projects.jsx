@@ -1,20 +1,24 @@
-import styled from "styled-components";
 import { projects } from "../../data";
 import { Container } from "../Container";
 import { useState } from "react";
 import ProjectItem from "../ui/ProjectItem";
 import PorjectItemModal from "../ui/PorjectItemModal";
-const StyledProjects = styled.div``;
+import styled from "styled-components";
+
+const StyledA = styled.a`
+  display: block;
+`;
 
 function Projects() {
   const [modal, setModal] = useState({ active: false, index: 0 });
+
   return (
     <Container>
-      <StyledProjects>
+      <div>
         {projects.map((project) => (
           <ProjectItem key={project.id} project={project} setModal={setModal} />
         ))}
-      </StyledProjects>
+      </div>
       <PorjectItemModal modal={modal} projects={projects} />
     </Container>
   );

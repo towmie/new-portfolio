@@ -91,22 +91,13 @@ canvas {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .modal img {
   height: auto;
 }
 
-.cursor::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  background-color: transparent;
-}
 .cursor,
 .cursorLabel {
   width: 80px;
@@ -121,5 +112,6 @@ canvas {
   justify-content: center;
   font-size: 14px;
   font-weight: 300;
+  cursor: pointer !important;
   pointer-events: none;
 }

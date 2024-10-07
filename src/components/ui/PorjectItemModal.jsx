@@ -78,9 +78,6 @@ function PorjectItemModal({ modal, projects }) {
             const { img, color } = project;
             return (
               <div
-                onClick={() => {
-                  console.log("clicked");
-                }}
                 className="modal"
                 style={{ backgroundColor: color }}
                 key={`modal_${index}`}
@@ -92,7 +89,6 @@ function PorjectItemModal({ modal, projects }) {
         </div>
       </motion.div>
       <motion.div
-        href="https://github.com/towmie"
         ref={cursor}
         className="cursor"
         variants={scaleAnimation}

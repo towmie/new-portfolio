@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
-const StyledProjectTitle = styled.div`
+const StyledProjectTitle = styled.a`
   padding: 40px 60px;
   border-bottom: 1px solid rgb(201, 201, 201);
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.2s linear;
+  text-decoration: none;
+  cursor: pointer;
 
   & h2 {
     transition: all 0.2s linear;
@@ -18,6 +20,7 @@ const StyledProjectTitle = styled.div`
 
   &:hover {
     opacity: 0.8;
+
     & h2 {
       transform: translatex(10px);
     }
@@ -50,6 +53,8 @@ const StyledProjectIcons = styled.div`
 function ProjectItem({ project, setModal }) {
   return (
     <StyledProjectTitle
+      href={project.link}
+      target="_blank"
       onMouseEnter={() => setModal({ active: true, index: project.id })}
       onMouseLeave={() => setModal({ active: false, index: project.id })}
     >
