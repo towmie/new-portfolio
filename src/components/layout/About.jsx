@@ -1,29 +1,7 @@
 import styled from "styled-components";
-
-const skillsFirstArr = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Three.js",
-  "GSAP",
-  "React Three Fiber",
-  "Styled Components",
-];
-const skillsSecondArr = [
-  "Redux",
-  "React Query",
-  "SCSS, LESS",
-  "jQuery",
-  "Alpine.js",
-  "Git",
-  "Tailwind",
-  "Bootstrap",
-];
-
+import { skillsFirstArr, skillsSecondArr } from "../../data";
+import { Container } from "../Container";
 const AboutWrapper = styled.div`
-  max-width: 1920px;
-  margin: 0 auto;
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -63,7 +41,7 @@ const AboutContainer = styled.div`
     list-style: none;
     margin: 0;
     animation: ${(props) =>
-      props.reverse
+      props.reverse === "true"
         ? "anim1 35s linear infinite"
         : "anim2 35s linear infinite"};
 
@@ -83,32 +61,34 @@ const AboutContainer = styled.div`
 
 function About() {
   return (
-    <AboutWrapper>
-      <AboutContainer>
-        <ul>
-          {skillsFirstArr.map((skill, index) => (
-            <li key={`first-${index}`}>{skill}</li>
-          ))}
-        </ul>
-        <ul>
-          {skillsFirstArr.map((skill, index) => (
-            <li key={`first-repeat-${index}`}>{skill}</li>
-          ))}
-        </ul>
-      </AboutContainer>
-      <AboutContainer reverse={true}>
-        <ul>
-          {skillsSecondArr.map((skill, index) => (
-            <li key={`second-${index}`}>{skill}</li>
-          ))}
-        </ul>
-        <ul>
-          {skillsSecondArr.map((skill, index) => (
-            <li key={`second-repeat-${index}`}>{skill}</li>
-          ))}
-        </ul>
-      </AboutContainer>
-    </AboutWrapper>
+    <Container>
+      <AboutWrapper>
+        <AboutContainer>
+          <ul>
+            {skillsFirstArr.map((skill, index) => (
+              <li key={`first-${index}`}>{skill}</li>
+            ))}
+          </ul>
+          <ul>
+            {skillsFirstArr.map((skill, index) => (
+              <li key={`first-repeat-${index}`}>{skill}</li>
+            ))}
+          </ul>
+        </AboutContainer>
+        <AboutContainer reverse={true.toString()}>
+          <ul>
+            {skillsSecondArr.map((skill, index) => (
+              <li key={`second-${index}`}>{skill}</li>
+            ))}
+          </ul>
+          <ul>
+            {skillsSecondArr.map((skill, index) => (
+              <li key={`second-repeat-${index}`}>{skill}</li>
+            ))}
+          </ul>
+        </AboutContainer>
+      </AboutWrapper>
+    </Container>
   );
 }
 

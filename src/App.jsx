@@ -2,6 +2,7 @@ import styled from "styled-components";
 import About from "./components/layout/About";
 import Footer from "./components/layout/Footer";
 import Hero from "./components/layout/Hero";
+import Projects from "./components/layout/Projects";
 
 const MainContainer = styled.div`
   position: relative;
@@ -14,7 +15,7 @@ function App() {
     <MainContainer>
       <Hero />
       <About />
-      {/* <Projects /> */}
+      <Projects />
       <Footer />
     </MainContainer>
   );

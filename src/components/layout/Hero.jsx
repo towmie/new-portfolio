@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import styled from "styled-components";
 import WavyBackground from "../ui/WavyBackground";
 import HeroContainer from "../ui/HeroContainer";
+import { Container } from "../Container";
 
 const StyledHero = styled.div`
   height: 100vh;
