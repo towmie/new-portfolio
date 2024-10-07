@@ -37,6 +37,7 @@ html {
   overscroll-behavior: none;
   font-family: "Raleway", sans-serif;
 }
+
 body,
 #root {
   margin: 0;
@@ -45,4 +46,22 @@ body,
 canvas {
   width: 100vw;
   height: 100vh;
+}
+
+@keyframes anim1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes anim2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import styled from "styled-components";
 import { IoIosArrowRoundForward } from "react-icons/io";
 
@@ -30,9 +30,8 @@ const HeroTitle = styled.div`
     display: inline-flex;
     margin: 0;
     font-size: 10vw;
-    font-weight: 800;
-    font-family: "Raleway", sans-serif;
-    font-style: italic;
+    font-weight: 400;
+    font-family: "Oswald", sans-serif;
   }
 
   & span {
@@ -65,7 +64,7 @@ const CVButton = styled.a`
   font-size: 18px;
   color: #000;
   font-weight: 300;
-  font-family: "Raleway", sans-serif;
+  font-family: "Oswald", sans-serif;
   text-decoration: none;
   border-radius: 5px;
   display: flex;
@@ -77,7 +76,6 @@ const CVButton = styled.a`
 function HeroContainer() {
   const lettersRef = useRef();
   const devTextRef = useRef();
-  const arrowRef = useRef();
   const dividerRef = useRef();
   const buttonRef = useRef();
   const tl = gsap.timeline({
@@ -94,8 +92,6 @@ function HeroContainer() {
     hoverTL.reverse();
   }
   useGSAP(() => {
-    hoverTL.to(arrowRef.current, { width: "50px" });
-
     tl.fromTo(
       lettersRef.current.children,
       {
@@ -153,7 +149,7 @@ function HeroContainer() {
         href="https://google.com"
       >
         Download CV
-        <IoIosArrowRoundForward ref={arrowRef} />
+        <IoIosArrowRoundForward />
       </CVButton>
     </StyledHeroContainer>
   );

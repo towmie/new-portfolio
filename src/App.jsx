@@ -14,6 +14,7 @@ function App() {
     <MainContainer>
       <Hero />
       <About />
+      {/* <Projects /> */}
       <Footer />
     </MainContainer>
   );
