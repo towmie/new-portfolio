@@ -5,10 +5,6 @@ import ProjectItem from "../ui/ProjectItem";
 import PorjectItemModal from "../ui/PorjectItemModal";
 import styled from "styled-components";
 
-const StyledA = styled.a`
-  display: block;
-`;
-
 function Projects() {
   const [modal, setModal] = useState({ active: false, index: 0 });
 

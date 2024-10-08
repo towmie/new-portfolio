@@ -1,5 +1,3 @@
-import { color } from "framer-motion";
-
 export const skillsFirstArr = [
   "HTML",
   "CSS",
@@ -18,7 +16,7 @@ export const skillsSecondArr = [
   "Alpine.js",
   "Git",
   "Tailwind",
-  "Bootstrap",
+  "WebGL",
 ];
 
 export const projects = [

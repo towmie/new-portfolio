@@ -9,6 +9,7 @@ const StyledProjectTitle = styled.a`
   transition: all 0.2s linear;
   text-decoration: none;
   cursor: pointer;
+  position: relative;
 
   & h2 {
     transition: all 0.2s linear;
@@ -19,7 +20,7 @@ const StyledProjectTitle = styled.a`
   }
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.6;
 
     & h2 {
       transform: translatex(10px);
