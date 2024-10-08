@@ -55,7 +55,7 @@ export const projects = [
     img: "/img/evox.jpg",
     iconLists: ["/img/gsap.svg"],
     link: "https://evox-lab.vercel.app/",
-    color: "#fff0a1",
+    color: "#fcf7e0",
   },
   {
     id: 3,
@@ -71,7 +71,7 @@ export const projects = [
     img: "/img/pizza.jpg",
     iconLists: ["/img/re.svg", "/img/tail.svg", "/img/redux.svg"],
     link: "https://pizza-project-ecru.vercel.app/",
-    color: "#fff0a1",
+    color: "#fcf7e0",
   },
   {
     id: 5,
@@ -87,7 +87,7 @@ export const projects = [
     img: "/img/game.jpg",
     iconLists: ["/img/re.svg", "/img/three.svg"],
     link: "https://three-js-azure-omega.vercel.app/",
-    color: "#fff0a1",
+    color: "#fcf7e0",
   },
   {
     id: 7,
@@ -103,7 +103,7 @@ export const projects = [
     img: "/img/house.jpg",
     iconLists: ["/img/re.svg", "/img/three.svg"],
     link: "https://scroll-house-one.vercel.app//",
-    color: "#fff0a1",
+    color: "#fcf7e0",
   },
   {
     id: 9,
@@ -116,6 +116,11 @@ export const projects = [
 ];
 
 export const socialMedia = [
+  {
+    id: 0,
+    network: "e-mail",
+    link: "mailto:andre00toz@gmail.com",
+  },
   {
     id: 1,
     network: "github",

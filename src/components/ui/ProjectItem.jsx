@@ -36,7 +36,7 @@ const StyledProjectTitle = styled.a`
 
   & h2 {
     font-size: 56px;
-    font-weight: 700;
+    font-weight: 500;
     color: #000;
   }
 `;

@@ -6,24 +6,20 @@ import { Container } from "../Container";
 
 const StyledHero = styled.div`
   height: 100vh;
-  max-height: 100vh;
-  padding: 40px 60px;
-  background-color: black;
-  background-image: url("/img/grid.png");
-  background-size: 110px 110px;
-  background-repeat: repeat;
+  max-height: calc(100vh + 100px);
+  height: 100%;
   box-sizing: border-box;
   position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    top: 0;
     left: 0;
-    right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    mix-blend-mode: darken;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+    background: linear-gradient(to top, #fff, transparent);
   }
 `;
 
@@ -47,11 +43,11 @@ function Hero() {
   return (
     <StyledHero>
       <HeroContainer />
-      <CanvasWrapper>
-        <Canvas camera={{ position: [0, 0, 1], fov: 45 }} color="black">
-          <WavyBackground />
-        </Canvas>
-      </CanvasWrapper>
+      {/* <CanvasWrapper> */}
+      <Canvas camera={{ position: [0, 0, 1], fov: 45 }} color="black">
+        <WavyBackground />
+      </Canvas>
+      {/* </CanvasWrapper> */}
     </StyledHero>
   );
 }

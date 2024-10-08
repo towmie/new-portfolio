@@ -3,7 +3,6 @@ import { Container } from "../Container";
 import { useState } from "react";
 import ProjectItem from "../ui/ProjectItem";
 import PorjectItemModal from "../ui/PorjectItemModal";
-import styled from "styled-components";
 
 function Projects() {
   const [modal, setModal] = useState({ active: false, index: 0 });
