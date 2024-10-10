@@ -1,16 +1,16 @@
 export const skillsFirstArr = [
-  "HTML",
   "CSS",
   "JavaScript",
+  "HTML",
   "React",
-  "Three.js",
+  "Styled Components",
   "GSAP",
   "React Three Fiber",
-  "Styled Components",
+  "Three.js",
 ];
 export const skillsSecondArr = [
   "Redux",
-  "React Query",
+  "Figma",
   "SCSS, LESS",
   "jQuery",
   "Alpine.js",
