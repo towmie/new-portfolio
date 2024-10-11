@@ -50,6 +50,10 @@ const AboutContainer = styled.div`
     & li {
       font-size: 5vw;
       font-weight: 700;
+
+      @media (max-width: 768px) {
+        font-size: 48px;
+      }
     }
 
     & li:nth-child(odd) {

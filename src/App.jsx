@@ -16,7 +16,7 @@ function App() {
   return (
     <Suspense fallback={<Loader />}>
       <MainContainer>
-        <Hero />
+        {/* <Hero /> */}
         <About />
         <Projects />
         <Footer />

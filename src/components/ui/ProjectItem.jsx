@@ -11,10 +11,6 @@ const StyledProjectTitle = styled.a`
   cursor: pointer;
   position: relative;
 
-  & h2 {
-    transition: all 0.2s linear;
-    margin: 0;
-  }
   & div {
     transition: all 0.2s linear;
   }
@@ -35,9 +31,15 @@ const StyledProjectTitle = styled.a`
   }
 
   & h2 {
+    transition: all 0.2s linear;
+    margin: 0;
     font-size: 5vw;
     font-weight: 500;
     color: #000;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+    }
   }
 
   @media (max-width: 991px) {
@@ -49,7 +51,7 @@ const StyledProjectTitle = styled.a`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1rem;
   }
 `;
 
@@ -60,6 +62,11 @@ const StyledProjectIcons = styled.div`
   & img {
     width: 40px;
     height: 40px;
+
+    @media (max-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
   }
 `;
 

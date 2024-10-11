@@ -13,6 +13,9 @@ const SocialWrapper = styled.div`
     font-size: 32px;
     margin: 0;
     font-family: "Oswald", sans-serif;
+    @media (max-width: 991px) {
+      font-size: 24px;
+    }
   }
 
   @media (max-width: 991px) {
