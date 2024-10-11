@@ -55,7 +55,7 @@ export const projects = [
     img: "/img/evox.jpg",
     iconLists: ["/img/gsap.svg"],
     link: "https://evox-lab.vercel.app/",
-    color: "#fcf7e0",
+    color: "#f5f5f5",
   },
   {
     id: 3,
@@ -63,7 +63,7 @@ export const projects = [
     img: "/img/joy.jpg",
     iconLists: ["/img/re.svg", "/img/three.svg"],
     link: "https://three-js-fx15.vercel.app/",
-    color: "#171717",
+    color: "#000",
   },
   {
     id: 4,
@@ -71,7 +71,7 @@ export const projects = [
     img: "/img/pizza.jpg",
     iconLists: ["/img/re.svg", "/img/tail.svg", "/img/redux.svg"],
     link: "https://pizza-project-ecru.vercel.app/",
-    color: "#fcf7e0",
+    color: "#f5f5f5",
   },
   {
     id: 5,
@@ -79,7 +79,7 @@ export const projects = [
     img: "/img/laptop.jpg",
     iconLists: ["/img/re.svg", "/img/three.svg"],
     link: "https://three-js-ak2b.vercel.app/",
-    color: "#001152",
+    color: "#000",
   },
   {
     id: 6,
@@ -87,7 +87,7 @@ export const projects = [
     img: "/img/game.jpg",
     iconLists: ["/img/re.svg", "/img/three.svg"],
     link: "https://three-js-azure-omega.vercel.app/",
-    color: "#fcf7e0",
+    color: "#f5f5f5",
   },
   {
     id: 7,
@@ -95,7 +95,7 @@ export const projects = [
     img: "/img/duck.jpg",
     iconLists: ["/img/re.svg", "/img/three.svg"],
     link: "https://solo-r3f.vercel.app/",
-    color: "#001152",
+    color: "#000",
   },
   {
     id: 8,
@@ -103,14 +103,14 @@ export const projects = [
     img: "/img/house.jpg",
     iconLists: ["/img/re.svg", "/img/three.svg"],
     link: "https://scroll-house-one.vercel.app//",
-    color: "#fcf7e0",
+    color: "#f5f5f5",
   },
   {
     id: 9,
     title: "Earth 3D",
     img: "/img/earth.jpg",
     iconLists: ["/img/three.svg"],
-    color: "#171717",
+    color: "#000",
     link: "https://three-js-j7yu.vercel.app/",
   },
 ];

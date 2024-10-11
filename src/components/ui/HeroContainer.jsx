@@ -22,6 +22,10 @@ const FirstRow = styled.div`
   align-items: center;
   width: 100%;
 
+  &:nth-child(2) {
+    z-index: -1 !important;
+  }
+
   & h1 {
     font-size: 12vw;
     margin: 0;
@@ -33,6 +37,7 @@ const FirstRow = styled.div`
   p {
     font-size: 36px;
     max-width: 600px;
+    text-align: right;
   }
 `;
 
@@ -41,6 +46,29 @@ function HeroContainer() {
   const secondRowRef = useRef();
   const thirdRowRef = useRef();
   const containerRef = useRef();
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: thirdRowRef.current,
+        markers: true,
+        start: "top 60%",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+
+    tl.to(secondRowRef.current, {
+      y: -150,
+      zIndex: -1,
+    }).to(
+      thirdRowRef.current,
+      {
+        y: -150,
+      },
+      0
+    );
+  });
 
   return (
     <>
