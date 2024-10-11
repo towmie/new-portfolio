@@ -26,6 +26,11 @@ const AboutWrapper = styled.div`
     z-index: 2;
     background: linear-gradient(to left, #fff, transparent);
   }
+
+  @media (max-width: 991px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 `;
 
 const AboutContainer = styled.div`
@@ -50,6 +55,7 @@ const AboutContainer = styled.div`
     & li {
       font-size: 5vw;
       font-weight: 700;
+      cursor: default;
 
       @media (max-width: 768px) {
         font-size: 48px;

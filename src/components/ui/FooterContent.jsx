@@ -34,6 +34,7 @@ const StyledTitle = styled.div`
     line-height: 1;
     letter-spacing: -0.05em;
     z-index: 1;
+    cursor: default;
 
     & span {
       color: red;
@@ -48,6 +49,31 @@ const SubText = styled.p`
   font-size: 32px;
   color: #000;
   font-family: "Oswald", sans-serif;
+  cursor: default;
+
+  & a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    color: #000;
+    transition: all 0.2s linear;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      background-color: red;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      transition: all 0.2s linear;
+    }
+    &:hover {
+      &::after {
+        left: 100%;
+      }
+    }
+  }
 
   @media (max-width: 991px) {
     font-size: 24px;
@@ -67,7 +93,10 @@ function FooterContent() {
             Contact<span>*</span>
           </h2>
         </StyledTitle>
-        <SubText>Let&apos;s Create Something Amazing Together</SubText>
+        <SubText>
+          Let&apos;s Create Something Amazing Together.{" "}
+          <a href="">Download CV</a>
+        </SubText>
       </ContentContainer>
       <SocialLinks />
     </>

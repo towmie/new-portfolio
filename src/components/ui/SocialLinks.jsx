@@ -13,6 +13,8 @@ const SocialWrapper = styled.div`
     font-size: 32px;
     margin: 0;
     font-family: "Oswald", sans-serif;
+    cursor: default;
+
     @media (max-width: 991px) {
       font-size: 24px;
     }
@@ -41,6 +43,7 @@ const SocialList = styled.div`
     font-size: 18px;
     opacity: 0.4;
     font-family: "Oswald", sans-serif;
+    cursor: default;
   }
 
   ul {
@@ -69,7 +72,7 @@ const SocialList = styled.div`
       left: 0;
       width: 0;
       height: 3px;
-      background-color: #fff;
+      background-color: red;
       transition: all 0.3s cubic-bezier(0.76, 0, 0.24, 1);
     }
 

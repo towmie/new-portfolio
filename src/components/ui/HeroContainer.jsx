@@ -37,6 +37,7 @@ const FirstRow = styled.div`
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 3px;
+    cursor: default;
   }
   p {
     font-size: 36px;
@@ -72,6 +73,10 @@ const MobileHero = styled.div`
 
       &:nth-child(2) {
         color: red;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14vw;
       }
     }
     p {

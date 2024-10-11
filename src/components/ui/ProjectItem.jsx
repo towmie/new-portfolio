@@ -16,8 +16,6 @@ const StyledProjectTitle = styled.a`
   }
 
   &:hover {
-    opacity: 0.6;
-
     & h2 {
       transform: translatex(10px);
     }
@@ -33,7 +31,7 @@ const StyledProjectTitle = styled.a`
   & h2 {
     transition: all 0.2s linear;
     margin: 0;
-    font-size: 5vw;
+    font-size: 48px;
     font-weight: 500;
     color: #000;
 
