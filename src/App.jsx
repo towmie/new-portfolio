@@ -5,6 +5,7 @@ import Hero from "./components/layout/Hero";
 import Projects from "./components/layout/Projects";
 import { Suspense } from "react";
 import { Loader } from "@react-three/drei";
+import Cv from "./components/layout/CV";
 
 const MainContainer = styled.div`
   position: relative;
@@ -16,8 +17,9 @@ function App() {
   return (
     <Suspense fallback={<Loader />}>
       <MainContainer>
-        {/* <Hero /> */}
+        <Hero />
         <About />
+        <Cv />
         <Projects />
         <Footer />
       </MainContainer>

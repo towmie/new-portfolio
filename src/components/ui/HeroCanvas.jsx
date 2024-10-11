@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Leva } from "leva";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,9 +15,14 @@ const StyledCanvas = styled.div`
   left: 0;
 
   & canvas {
+    position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 0;
+
+    @media (max-width: 991px) {
+      z-index: -1;
+    }
   }
 `;
 
@@ -32,7 +36,7 @@ function HeroCanvas() {
           color={"white"}
         />
         <group>
-          <Sculpture scale={0.25} />
+          <Sculpture />
         </group>
       </Canvas>
     </StyledCanvas>

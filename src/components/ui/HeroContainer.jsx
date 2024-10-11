@@ -14,6 +14,10 @@ const StyledHeroContainer = styled.div`
   justify-content: space-around;
   align-items: flex-start;
   gap: 24px;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
 `;
 
 const FirstRow = styled.div`
@@ -38,6 +42,46 @@ const FirstRow = styled.div`
     font-size: 36px;
     max-width: 600px;
     text-align: right;
+  }
+`;
+
+const MobileHero = styled.div`
+  display: none;
+
+  @media (max-width: 991px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 30px 50px;
+    z-index: 999;
+
+    @media (max-width: 768px) {
+      padding: 30px 20px;
+    }
+
+    & h1 {
+      font-size: 12vw;
+      margin: 0;
+      line-height: 1;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: 3px;
+
+      &:nth-child(2) {
+        color: red;
+      }
+    }
+    p {
+      font-size: 36px;
+      max-width: 600px;
+
+      @media (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
   }
 `;
 
@@ -88,6 +132,18 @@ function HeroContainer() {
           <h1 style={{ zIndex: 999 }}>Web Experiences</h1>
         </FirstRow>
       </StyledHeroContainer>
+      <MobileHero>
+        <p>Hi, I&apos;m Andrei Ziuzin</p>
+        <div>
+          <h1>Crafting</h1>
+          <h1>Immersive</h1>
+          <h1>Web Experiences</h1>
+        </div>
+        <p>
+          I&apos;m a creative developer focused on delivering stunning,
+          interactive, and 3D-powered web experiences
+        </p>
+      </MobileHero>
     </>
   );
 }

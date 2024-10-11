@@ -94,6 +94,5 @@ canvas {
   border-radius: 50%;
 }
 .cursorLabel {
-  border: 1px solid white;
-  background-color: #000;
+  background-color: red;
 }

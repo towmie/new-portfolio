@@ -34,6 +34,10 @@ const StyledTitle = styled.div`
     line-height: 1;
     letter-spacing: -0.05em;
     z-index: 1;
+
+    & span {
+      color: red;
+    }
   }
 `;
 
@@ -59,7 +63,9 @@ function FooterContent() {
     <>
       <ContentContainer>
         <StyledTitle>
-          <h2>Contact*</h2>
+          <h2>
+            Contact<span>*</span>
+          </h2>
         </StyledTitle>
         <SubText>Let&apos;s Create Something Amazing Together</SubText>
       </ContentContainer>

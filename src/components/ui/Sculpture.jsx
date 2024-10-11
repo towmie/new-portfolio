@@ -1,13 +1,12 @@
-import { useGSAP } from "@gsap/react";
 import { MeshTransmissionMaterial, useGLTF } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
-import { useControls } from "leva";
 import { useRef } from "react";
 
 export function Sculpture(props) {
   const { nodes, materials } = useGLTF("/models/laocoon_and_his_sons.glb");
   const modelRef = useRef();
   const { viewport } = useThree();
+  const isMobile = window.innerWidth < 768;
 
   const materialProps = {
     thickness: 3,
@@ -19,14 +18,22 @@ export function Sculpture(props) {
   };
 
   return (
-    <group {...props} dispose={null} scale={viewport.width / 50}>
+    <group
+      {...props}
+      dispose={null}
+      scale={isMobile ? viewport.width / 30 : viewport.width / 50}
+    >
       <mesh
         ref={modelRef}
         castShadow
         receiveShadow
         geometry={nodes.Object_2.geometry}
         material={materials.None}
-        position={[-0.348, -20, 1]}
+        position={[
+          isMobile ? 0 : -0.348,
+          isMobile ? -24 : -20,
+          isMobile ? 10 : 1,
+        ]}
         rotation={[-Math.PI, Math.PI / 2, 0]}
       >
         <MeshTransmissionMaterial {...materialProps} />
