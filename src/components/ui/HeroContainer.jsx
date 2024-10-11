@@ -51,8 +51,7 @@ function HeroContainer() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: thirdRowRef.current,
-        markers: true,
-        start: "top 60%",
+        start: "top 40%",
         end: "bottom top",
         scrub: true,
       },

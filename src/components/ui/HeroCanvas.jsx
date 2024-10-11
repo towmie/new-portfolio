@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Leva } from "leva";
 
 gsap.registerPlugin(ScrollTrigger);
 

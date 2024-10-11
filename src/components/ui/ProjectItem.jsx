@@ -35,9 +35,21 @@ const StyledProjectTitle = styled.a`
   }
 
   & h2 {
-    font-size: 56px;
+    font-size: 5vw;
     font-weight: 500;
     color: #000;
+  }
+
+  @media (max-width: 991px) {
+    padding: 30px 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
   }
 `;
 

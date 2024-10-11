@@ -4,7 +4,6 @@ import styled from "styled-components";
 const SocialWrapper = styled.div`
   display: flex;
   align-items: center;
-  /* align-items: flex-start; */
   justify-content: space-between;
   gap: 20px;
   padding: 40px 60px;
@@ -15,9 +14,25 @@ const SocialWrapper = styled.div`
     margin: 0;
     font-family: "Oswald", sans-serif;
   }
+
+  @media (max-width: 991px) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 30px;
+  }
 `;
 
 const SocialList = styled.div`
+  min-width: 350px;
+
+  @media (max-width: 768px) {
+    min-width: 100%;
+  }
+
   p {
     color: #fff;
     font-size: 18px;
@@ -29,6 +44,7 @@ const SocialList = styled.div`
     display: flex;
     gap: 20px;
     align-items: center;
+    flex-wrap: wrap;
     margin: 0;
     margin-top: 1rem;
     padding: 0;

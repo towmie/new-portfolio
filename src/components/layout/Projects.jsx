@@ -7,7 +7,6 @@ import styled from "styled-components";
 
 const ProjectWrapper = styled.div`
   position: relative;
-  /* z-index: 1000; */
   background-color: #fff;
 `;
 function Projects() {
