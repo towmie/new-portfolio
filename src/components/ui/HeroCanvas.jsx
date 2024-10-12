@@ -3,6 +3,7 @@ import { Sculpture } from "./Sculpture";
 import styled from "styled-components";
 import Loader from "./Loader";
 import { Suspense } from "react";
+import { Perf } from "r3f-perf";
 
 const StyledCanvas = styled.div`
   height: 100vh;
@@ -27,6 +28,7 @@ function HeroCanvas() {
   return (
     <StyledCanvas>
       <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
+        {/* <Perf /> */}
         <directionalLight
           position={[10, 10, 10]}
           intensity={14}

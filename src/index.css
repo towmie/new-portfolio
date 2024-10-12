@@ -57,6 +57,12 @@ canvas {
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .modalContainer {
+    display: none;
+  }
+}
+
 .modalSlider {
   height: 100%;
   width: 100%;
