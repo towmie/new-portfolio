@@ -31,8 +31,8 @@ export const projects = [
       "/img/three.svg",
       "/img/gsap.svg",
     ],
-    link: "https://apple-iphone-ruby.vercel.app/",
-    color: "#001152",
+    link: "https://portfolio-eta-rouge-85.vercel.app/",
+    color: "#000",
   },
   {
     id: 1,
@@ -46,7 +46,7 @@ export const projects = [
       "/img/gsap.svg",
     ],
     link: "https://apple-iphone-ruby.vercel.app/",
-    color: "#171717",
+    color: "#000",
   },
 
   {
