@@ -27,19 +27,19 @@ const StyledCanvas = styled.div`
 function HeroCanvas() {
   return (
     <StyledCanvas>
-      <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-        {/* <Perf /> */}
-        <directionalLight
-          position={[10, 10, 10]}
-          intensity={14}
-          color={"white"}
-        />
-        <group>
-          <Suspense fallback={null}>
+      <Suspense fallback={null}>
+        <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
+          {/* <Perf /> */}
+          <directionalLight
+            position={[10, 10, 10]}
+            intensity={14}
+            color={"white"}
+          />
+          <group>
             <Sculpture />
-          </Suspense>
-        </group>
-      </Canvas>
+          </group>
+        </Canvas>
+      </Suspense>
       <Loader />
     </StyledCanvas>
   );
