@@ -95,7 +95,9 @@ function FooterContent() {
         </StyledTitle>
         <SubText>
           Let&apos;s Create Something Amazing Together.{" "}
-          <a href="">Download CV</a>
+          <a target="_blank" href="/public/img/cv.pdf">
+            Download CV
+          </a>
         </SubText>
       </ContentContainer>
       <SocialLinks />
