@@ -137,11 +137,13 @@ export default function Loader() {
     <>
       <LoaderContent ref={loaderContentRef}>
         <div ref={textContainerRef}>
-          <p>Andrei. Creative Frontend Developer</p>
+          <p>
+            Andrei - <Span>Creative Frontend </Span>Developer
+          </p>
           <LoadingBar>
             <span ref={barRef} />
             <BaseLine></BaseLine>
-            <p>{progress}%</p>
+            <p>({progress}%)</p>
           </LoadingBar>
         </div>
         <StyledLoader ref={loadRef}>
