@@ -7,6 +7,7 @@ const StyledHero = styled.div`
   height: 100vh;
   box-sizing: border-box;
   position: relative;
+  z-index: 999;
 `;
 
 function Hero() {

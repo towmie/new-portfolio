@@ -5,6 +5,7 @@ const AboutWrapper = styled.div`
   position: relative;
   padding-top: 100px;
   padding-bottom: 100px;
+  z-index: 999;
 
   &::before {
     content: "";
