@@ -94,7 +94,6 @@ const BaseLine = styled.div`
 
 const Span = styled.span`
   color: red;
-  font-style: italic;
 `;
 
 export default function Loader() {
@@ -138,7 +137,7 @@ export default function Loader() {
       <LoaderContent ref={loaderContentRef}>
         <div ref={textContainerRef}>
           <p>
-            Andrei - <Span>Creative Frontend </Span>Developer
+            Andrei - <Span>Creative Frontend </Span> - Developer
           </p>
           <LoadingBar>
             <span ref={barRef} />
