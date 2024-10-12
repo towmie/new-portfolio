@@ -33,7 +33,9 @@ function HeroCanvas() {
           color={"white"}
         />
         <group>
-          <Sculpture />
+          <Suspense fallback={null}>
+            <Sculpture />
+          </Suspense>
         </group>
       </Canvas>
       <Loader />
