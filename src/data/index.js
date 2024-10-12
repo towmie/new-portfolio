@@ -126,6 +126,7 @@ export const socialMedia = [
     network: "github",
     link: "https://github.com/towmie",
   },
+
   {
     id: 2,
     network: "linkedin",
