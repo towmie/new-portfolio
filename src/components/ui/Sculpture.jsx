@@ -1,12 +1,30 @@
 import { MeshTransmissionMaterial, useGLTF } from "@react-three/drei";
 import { useThree } from "@react-three/fiber";
+import gsap from "gsap";
 import { useRef } from "react";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function Sculpture(props) {
   const { nodes, materials } = useGLTF("/models/laocoon_and_his_sons.glb");
   const modelRef = useRef();
   const { viewport } = useThree();
   const isMobile = window.innerWidth < 768;
+
+  // useLayoutEffect(() => {
+  //   if (!modelRef.current) return;
+  //   gsap.to(modelRef.current.rotation, {
+  //     scrollTrigger: {
+  //       trigger: ".section-1",
+  //       start: "top top",
+  //       end: "bottom top",
+  //       scrub: true,
+  //     },
+  //     y: Math.PI / 2,
+  //     duration: 1,
+  //   });
+  // }, []);
 
   const materialProps = {
     thickness: 3,

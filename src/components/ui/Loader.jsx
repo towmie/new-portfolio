@@ -65,7 +65,7 @@ const LoadingBar = styled.div`
 
   & span {
     width: 100%;
-    height: 11px;
+    height: 3px;
     transform: scaleX(0);
     transform-origin: left;
     background-color: #fff;
@@ -85,7 +85,7 @@ const LoadingBar = styled.div`
 
 const BaseLine = styled.div`
   position: absolute;
-  top: 5px;
+  top: 1px;
   left: 0;
   width: 100%;
   height: 1px;
