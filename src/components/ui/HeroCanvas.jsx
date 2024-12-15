@@ -29,7 +29,7 @@ function HeroCanvas() {
     <StyledCanvas>
       <Suspense fallback={null}>
         <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
-          <Perf />
+          {/* <Perf /> */}
           <directionalLight
             position={[10, 10, 10]}
             intensity={14}
