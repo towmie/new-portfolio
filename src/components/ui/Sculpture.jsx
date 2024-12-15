@@ -12,20 +12,6 @@ export function Sculpture(props) {
   const { viewport } = useThree();
   const isMobile = window.innerWidth < 768;
 
-  // useLayoutEffect(() => {
-  //   if (!modelRef.current) return;
-  //   gsap.to(modelRef.current.rotation, {
-  //     scrollTrigger: {
-  //       trigger: ".section-1",
-  //       start: "top top",
-  //       end: "bottom top",
-  //       scrub: true,
-  //     },
-  //     y: Math.PI / 2,
-  //     duration: 1,
-  //   });
-  // }, []);
-
   const materialProps = {
     thickness: 3,
     roughness: 0,
@@ -43,8 +29,7 @@ export function Sculpture(props) {
     >
       <mesh
         ref={modelRef}
-        castShadow
-        receiveShadow
+        frustumCulled={true}
         geometry={nodes.Object_2.geometry}
         material={materials.None}
         position={[
