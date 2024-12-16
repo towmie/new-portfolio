@@ -1,8 +1,6 @@
 import { useProgress } from "@react-three/drei";
-import { useFrame } from "@react-three/fiber";
-import { a } from "framer-motion/client";
 import gsap from "gsap";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
 
 const StyledLoader = styled.div`
@@ -142,7 +140,7 @@ export default function Loader() {
           <LoadingBar>
             <span ref={barRef} />
             <BaseLine></BaseLine>
-            <p>({progress}%)</p>
+            <p>({Math.trunc(progress)}%)</p>
           </LoadingBar>
         </div>
         <StyledLoader ref={loadRef}>
